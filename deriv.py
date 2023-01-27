@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from math import sin,cos
 
-# Function to
+# Function to numerically differentiate
 def f(z):
     return exp(z)*sin(z)
 
