@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from math import sin,cos
+from math import sin,cos,exp
 
 # Function to numerically differentiate
 def f(z):
