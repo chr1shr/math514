@@ -3,11 +3,11 @@ from math import exp,cos
 
 # Function to perform root-finding on
 def f(x):
-    return 0.1-cos(exp(x))
+    return exp(x)-x-4
 
 # Initial bracket, assuming f(a)<0 and f(b)>0
 a=0
-b=1
+b=2
 
 # Perform the bisection search
 while b-a>1e-10:
