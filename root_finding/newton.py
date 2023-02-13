@@ -4,17 +4,17 @@ import sys
 
 # Function to consider
 def f(x):
-    return exp(x)-x-4
+    return x*x*x-4*x*x+4.1*x
 
 # Derivative of the function
 def df(x):
-    return exp(x)-1
+    return 3*x*x-8*x+4.1
 
 # Starting guess
-x=1.5
+x=2.2
 
 # Perform ten steps of the Newton iteration
-n=10
+n=100
 for i in range(n):
 
     # Take Newton step
