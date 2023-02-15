@@ -20,8 +20,9 @@ def l_inter(x,xp,yp):
     return s
 
 # Control points and Runge function
-n=5
-xp=np.linspace(-1,1,n)
+n=30
+#xp=np.linspace(-1,1,n)
+xp=np.array([cos((2*j+1)*pi/(2*n)) for j in range(n)]) 
 yp=np.array([1/(1+25*x*x) for x in xp])
 
 # Sample points
