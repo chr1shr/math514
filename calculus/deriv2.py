@@ -20,7 +20,7 @@ while h>1e-16:
     # Compute the first-order one-sided finite difference
     df=(f2-f1)/h
 
-    # Compute the first-order one-sided finite difference
+    # Compute the second-order one-sided finite difference
     df2=(-0.5*f3+2*f2-1.5*f1)/h
 
     # Print the numerical and exact derivatives, and the magnitude of absolute
