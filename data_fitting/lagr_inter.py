@@ -20,9 +20,9 @@ def l_inter(x,xp,yp):
     return s
 
 # Control points and Runge function
-n=30
-#xp=np.linspace(-1,1,n)
-xp=np.array([cos((2*j+1)*pi/(2*n)) for j in range(n)]) 
+n=11
+xp=np.linspace(-1,1,n)
+#xp=np.array([cos((2*j+1)*pi/(2*n)) for j in range(n)])
 yp=np.array([1/(1+25*x*x) for x in xp])
 
 # Sample points
@@ -32,7 +32,7 @@ yf=np.array([1/(1+25*x*x) for x in xx])
 
 # Plot figure using Matplotlib
 plt.figure()
-plt.plot(xx,yf,'--',xx,yy,'--',xp,yp,'o')
+plt.plot(xx,yf,'--',xx,yy,'--',xp,yp,'o',linewidth=6)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
