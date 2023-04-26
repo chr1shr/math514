@@ -31,13 +31,13 @@ while t<=6:
     print(t,y,yexact,y-yexact,l)
 
     # Fixed-point iteration for k1 and k2
-    #l=0
+    l=0
     while True:
 
         # Compute new k1 and k2 using previous values
         # as a starting guess
         k1new=f(t+c1*h,y+h*(0.25*k1+a12*k2))
-        k2new=f(t+c2*h,y+h*(a21*k2+0.25*k1))
+        k2new=f(t+c2*h,y+h*(a21*k1+0.25*k2))
 
         # Compute change in k1 and k2, to determine if they have
         # converged
