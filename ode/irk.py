@@ -2,8 +2,8 @@
 from math import sqrt,exp
 
 # Initial variables and constants
-t=0
-h=0.05
+x=0
+h=1/32.
 l=0
 
 # Constants in the method
@@ -13,8 +13,8 @@ a12=(3-2*sqrt(3))/12.
 a21=(3+2*sqrt(3))/12.
 
 # Function to integrate
-def f(t,y):
-    return exp(-0.5*t*t)-y*t
+def f(x,y):
+    return exp(-0.5*x*x)-y*x
 
 # Starting value, and initial guess for k1 and k2
 y=0
@@ -22,13 +22,13 @@ k1=0
 k2=0
 
 # Apply timesteps until t>6
-while t<=6:
+while x<=6:
 
     # Analytical solution
-    yexact=t*exp(-0.5*t*t)
+    yexact=x*exp(-0.5*x*x)
 
     # Print the solutions and error
-    print(t,y,yexact,y-yexact,l)
+    print(x,y,yexact,y-yexact,l)
 
     # Fixed-point iteration for k1 and k2
     l=0
@@ -36,8 +36,8 @@ while t<=6:
 
         # Compute new k1 and k2 using previous values
         # as a starting guess
-        k1new=f(t+c1*h,y+h*(0.25*k1+a12*k2))
-        k2new=f(t+c2*h,y+h*(a21*k1+0.25*k2))
+        k1new=f(x+c1*h,y+h*(0.25*k1+a12*k2))
+        k2new=f(x+c2*h,y+h*(a21*k1new+0.25*k2))
 
         # Compute change in k1 and k2, to determine if they have
         # converged
@@ -53,4 +53,4 @@ while t<=6:
 
     # Update solution and time 
     y+=0.5*h*(k1+k2)
-    t+=h
+    x+=h
