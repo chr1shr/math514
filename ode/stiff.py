@@ -13,7 +13,7 @@ yi=np.array([[1],[0]])
 # Starting time and timestep (currently chosen within the stability region of
 # the explicit method)
 t=0
-h=0.02
+h=1/30000
 
 while t<2:
 
