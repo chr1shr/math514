@@ -1,5 +1,5 @@
 # UW–Madison Math/CS 514: Code examples
-Math/CS 514 is course taught at the University of Wisconsin, Madison. The goal
+Math/CS 514 is a course taught at the University of Wisconsin, Madison. The goal
 of the course is to provide graduate students and advanced undergraduate
 students with an introduction to numerical analysis, or numerical approaches to
 calculus.
